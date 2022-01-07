@@ -47,7 +47,7 @@ public class DebCardFormTest {
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.tagName("button")).click();
         String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-        String actualText = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().trim();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals(expectedText, actualText);
     }
 }
